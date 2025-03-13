@@ -1,0 +1,382 @@
+{
+    "output_file": "settings.json",
+    
+    "liveOnly": {
+        "type": "checkbox",
+        "value": true,
+        "label": "Live Only",
+        "tooltip": "Only allow giveaway entries when stream is live",
+        "group": "General"
+    },
+    "useTimer": {
+        "type": "checkbox",
+        "value": false,
+        "label": "Use Timer",
+        "tooltip": "Automatically draw winner after 24 hours",
+        "group": "General"
+    },
+    "command": {
+        "type": "textbox",
+        "value": "!giveaway",
+        "label": "Giveaway Command",
+        "tooltip": "Command for entering giveaway",
+        "group": "Commands"
+    },
+    "drawCommand": {
+        "type": "textbox",
+        "value": "!draw",
+        "label": "Draw Command",
+        "tooltip": "Command for drawing a winner",
+        "group": "Commands"
+    },
+    "resetCommand": {
+        "type": "textbox",
+        "value": "!resetgiveaway",
+        "label": "Reset Command",
+        "tooltip": "Command for resetting giveaway data",
+        "group": "Commands"
+    },
+    "startCommand": {
+        "type": "textbox",
+        "value": "!startgiveaway",
+        "label": "Start Command",
+        "tooltip": "Command for starting a new giveaway",
+        "group": "Commands"
+    },
+    "reloadCommand": {
+        "type": "textbox",
+        "value": "!reloadgiveaway",
+        "label": "Reload Command",
+        "tooltip": "Command for reloading giveaway settings",
+        "group": "Commands"
+    },
+    "entryCost": {
+        "type": "numberbox",
+        "value": 100,
+        "label": "Entry Cost",
+        "tooltip": "Points required per entry",
+        "group": "Cost"
+    },
+    "cooldownDays": {
+        "type": "numberbox",
+        "value": 30,
+        "label": "Cooldown Days",
+        "tooltip": "Days before a winner can enter again",
+        "group": "Settings"
+    },
+    "permission": {
+        "type": "textbox",
+        "value": "Everyone",
+        "label": "Permission",
+        "tooltip": "Permission required to enter giveaway",
+        "group": "Permissions"
+    },
+    "drawPermission": {
+        "type": "textbox",
+        "value": "Moderator",
+        "label": "Draw Permission",
+        "tooltip": "Permission required to draw winner",
+        "group": "Permissions"
+    },
+    "resetPermission": {
+        "type": "textbox",
+        "value": "Moderator",
+        "label": "Reset Permission",
+        "tooltip": "Permission required to reset giveaway",
+        "group": "Permissions"
+    },
+    "startPermission": {
+        "type": "textbox",
+        "value": "Moderator",
+        "label": "Start Permission",
+        "tooltip": "Permission required to start giveaway",
+        "group": "Permissions"
+    },
+    "startResponse": {
+        "type": "textbox",
+        "value": "🎮 Giveaway started! Use $command <game_id> <discord_username> [entries] to enter! Example: $command abc123 JohnDoe#1234 5",
+        "label": "Start Response",
+        "tooltip": "Message shown when giveaway starts",
+        "group": "Responses"
+    },
+    "startResponse2": {
+        "type": "textbox",
+        "value": "Discord username is compulsory! Make sure to provide your correct Discord username when entering!",
+        "label": "Start Response 2",
+        "tooltip": "Second message shown when giveaway starts",
+        "group": "Responses"
+    },
+    "entryResponse": {
+        "type": "textbox",
+        "value": "$user entered the giveaway with $entries entries!",
+        "label": "Entry Response",
+        "tooltip": "Message shown when user enters giveaway",
+        "group": "Responses"
+    },
+    "updateResponse": {
+        "type": "textbox",
+        "value": "$user updated their entries to $entries!",
+        "label": "Update Response",
+        "tooltip": "Message shown when user updates entries",
+        "group": "Responses"
+    },
+    "winnerResponse": {
+        "type": "textbox",
+        "value": "🎉 $user won the giveaway with $entries entries!",
+        "label": "Winner Response",
+        "tooltip": "Message shown when winner is selected",
+        "group": "Responses"
+    },
+    "alreadyWonResponse": {
+        "type": "textbox",
+        "value": "$user won recently and is on cooldown until $cooldown",
+        "label": "Already Won Response",
+        "tooltip": "Message shown when user is on cooldown",
+        "group": "Responses"
+    },
+    "invalidDiscordResponse": {
+        "type": "textbox",
+        "value": "$user Invalid Discord username format. Please provide your Discord username(unique id).",
+        "label": "Invalid Discord Response",
+        "tooltip": "Message shown for invalid Discord username",
+        "group": "Responses"
+    },
+    "invalidEntriesResponse": {
+        "type": "textbox",
+        "value": "$user Invalid number of entries. Please provide a valid number.",
+        "label": "Invalid Entries Response",
+        "tooltip": "Message shown for invalid number of entries",
+        "group": "Responses"
+    },
+    "insufficientPointsResponse": {
+        "type": "textbox",
+        "value": "$user You need $cost points to enter the giveaway. You have $points points.",
+        "label": "Insufficient Points Response",
+        "tooltip": "Message shown when user doesn't have enough points",
+        "group": "Responses"
+    },
+    "noParticipantsResponse": {
+        "type": "textbox",
+        "value": "$user No participants in the giveaway!",
+        "label": "No Participants Response",
+        "tooltip": "Message shown when no participants in giveaway",
+        "group": "Responses"
+    },
+    "notStartedResponse": {
+        "type": "textbox",
+        "value": "$user Giveaway is not active right now!",
+        "label": "Not Started Response",
+        "tooltip": "Message shown when giveaway is not active",
+        "group": "Responses"
+    },
+    "noPermissionResponse": {
+        "type": "textbox",
+        "value": "$user You don't have permission to draw the winner!",
+        "label": "No Permission Response",
+        "tooltip": "Message shown when user lacks permission",
+        "group": "Responses"
+    },
+    "resetSuccessResponse": {
+        "type": "textbox",
+        "value": "$user Giveaway data has been reset successfully!",
+        "label": "Reset Success Response",
+        "tooltip": "Message shown when giveaway is reset",
+        "group": "Responses"
+    },
+    "resetNoPermissionResponse": {
+        "type": "textbox",
+        "value": "$user You don't have permission to reset the giveaway!",
+        "label": "Reset No Permission Response",
+        "tooltip": "Message shown when user can't reset giveaway",
+        "group": "Responses"
+    },
+    "duplicateGameIdResponse": {
+        "type": "textbox",
+        "value": "$user This game ID is already registered by another user!",
+        "label": "Duplicate Game ID Response",
+        "tooltip": "Message shown for duplicate game ID",
+        "group": "Responses"
+    },
+    "duplicateDiscordResponse": {
+        "type": "textbox",
+        "value": "$user This Discord username is already registered by another user!",
+        "label": "Duplicate Discord Response",
+        "tooltip": "Message shown for duplicate Discord username",
+        "group": "Responses"
+    },
+    "gameIdOnCooldownResponse": {
+        "type": "textbox",
+        "value": "$user This game ID is on cooldown until $cooldown!",
+        "label": "Game ID Cooldown Response",
+        "tooltip": "Message shown when game ID is on cooldown",
+        "group": "Responses"
+    },
+    "discordOnCooldownResponse": {
+        "type": "textbox",
+        "value": "$user This Discord username is on cooldown until $cooldown!",
+        "label": "Discord Cooldown Response",
+        "tooltip": "Message shown when Discord username is on cooldown",
+        "group": "Responses"
+    },
+    "firstTimeEntryResponse": {
+        "type": "textbox",
+        "value": "$user To enter the giveaway for the first time, use: $command <game_id> <discord_username> [entries] Example: $command abc123 JohnDoe#1234 5",
+        "label": "First Time Entry Response",
+        "tooltip": "Message shown for first-time users",
+        "group": "Responses"
+    },
+    "openReadMe": {
+        "type": "button",
+        "label": "Open ReadMe",
+        "tooltip": "Opens the ReadMe.txt file",
+        "function": "OpenReadMe",
+        "wsevent": "",
+        "group": "General"
+    },
+    "responseStartFirst": {
+        "type": "textbox",
+        "value": "To enter the giveaway, use: !giveaway <game_id> <discord_username> [entries]",
+        "label": "Start Message 1",
+        "tooltip": "First message when starting giveaway",
+        "group": "Messages"
+    },
+    "responseStartSecond": {
+        "type": "textbox",
+        "value": "Remember to include your Discord username to be eligible!",
+        "label": "Start Message 2",
+        "tooltip": "Second message when starting giveaway",
+        "group": "Messages"
+    },
+    "responseNotEnoughPoints": {
+        "type": "textbox",
+        "value": "You don't have enough points to enter!",
+        "label": "Not Enough Points",
+        "tooltip": "Message when user doesn't have enough points",
+        "group": "Messages"
+    },
+    "responseInvalidFormat": {
+        "type": "textbox",
+        "value": "Invalid format! Use: !giveaway <game_id> <discord_username> [entries]",
+        "label": "Invalid Format",
+        "tooltip": "Message when command format is invalid",
+        "group": "Messages"
+    },
+    "responseAlreadyEntered": {
+        "type": "textbox",
+        "value": "You've already entered this giveaway!",
+        "label": "Already Entered",
+        "tooltip": "Message when user has already entered",
+        "group": "Messages"
+    },
+    "responseWinner": {
+        "type": "textbox",
+        "value": "Congratulations @{0}! You've won the giveaway!",
+        "label": "Winner Message",
+        "tooltip": "Message when announcing winner",
+        "group": "Messages"
+    },
+    "responseNoWinner": {
+        "type": "textbox",
+        "value": "No one has entered the giveaway yet!",
+        "label": "No Winner",
+        "tooltip": "Message when no one has entered",
+        "group": "Messages"
+    },
+    "responseOnCooldown": {
+        "type": "textbox",
+        "value": "You're on cooldown from winning! Try again in {0} days.",
+        "label": "On Cooldown",
+        "tooltip": "Message when user is on cooldown",
+        "group": "Messages"
+    },
+    "responseGiveawayNotActive": {
+        "type": "textbox",
+        "value": "There is no active giveaway at the moment!",
+        "label": "Not Active",
+        "tooltip": "Message when no giveaway is active",
+        "group": "Messages"
+    },
+    "responseEntriesAdded": {
+        "type": "textbox",
+        "value": "Added {0} entries to the giveaway!",
+        "label": "Entries Added",
+        "tooltip": "Message when entries are added",
+        "group": "Messages"
+    },
+    "responseFirstEntry": {
+        "type": "textbox",
+        "value": "First time entering? Use: !giveaway <game_id> <discord_username> [entries]",
+        "label": "First Entry",
+        "tooltip": "Message for first-time entry instructions",
+        "group": "Messages"
+    },
+    "reloadResponse": {
+        "type": "textbox",
+        "value": "$user Giveaway settings reloaded successfully!",
+        "label": "Reload Response",
+        "tooltip": "Message when settings are reloaded"
+    },
+    "updateGameIdCommand": {
+        "type": "textbox",
+        "value": "!updategameid",
+        "label": "Update Game ID Command",
+        "tooltip": "Command for updating game ID",
+        "group": "Commands"
+    },
+    "updateDiscordIdCommand": {
+        "type": "textbox",
+        "value": "!updatediscordid",
+        "label": "Update Discord ID Command",
+        "tooltip": "Command for updating Discord username",
+        "group": "Commands"
+    },
+    "existingEntryResponse": {
+        "type": "textbox",
+        "value": "$user You already have an entry with Game ID: $gameid and Discord ID: $discordid. Use $updategameid <new_gameid> or $updatediscordid <new_discordid> to update.",
+        "label": "Existing Entry Response",
+        "tooltip": "Message shown when user tries to enter but already has an entry",
+        "group": "Responses"
+    },
+    "updateGameIdSuccess": {
+        "type": "textbox",
+        "value": "$user Your Game ID has been updated from $oldid to $newid",
+        "label": "Update Game ID Success",
+        "tooltip": "Message shown when game ID is updated successfully",
+        "group": "Responses"
+    },
+    "updateDiscordIdSuccess": {
+        "type": "textbox",
+        "value": "$user Your Discord ID has been updated from $oldid to $newid",
+        "label": "Update Discord ID Success",
+        "tooltip": "Message shown when Discord ID is updated successfully",
+        "group": "Responses"
+    },
+    "noExistingEntryResponse": {
+        "type": "textbox",
+        "value": "$user You need to enter the giveaway first using $command <game_id> <discord_username> [entries]",
+        "label": "No Existing Entry Response",
+        "tooltip": "Message shown when user tries to update but has no entry",
+        "group": "Responses"
+    },
+    "entriesCommand": {
+        "type": "textbox",
+        "value": "!entries",
+        "label": "Entries Command",
+        "tooltip": "Command to view your giveaway entry",
+        "group": "Commands"
+    },
+    "entriesResponse": {
+        "type": "textbox",
+        "value": "$user Your entry: Game ID: $gameid, Discord ID: $discordid, Entries: $entries",
+        "label": "Entries Response",
+        "tooltip": "Message shown when user checks their entry",
+        "group": "Responses"
+    },
+    "noEntryResponse": {
+        "type": "textbox",
+        "value": "$user You haven't entered the giveaway yet! Use $command <game_id> <discord_username> [entries] to enter.",
+        "label": "No Entry Response",
+        "tooltip": "Message shown when user has no entry",
+        "group": "Responses"
+    }
+} 
